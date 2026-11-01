@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>V2 浏览器验收台</title>
+<style>body{background:#080b15;color:#eaf0ff;font:15px/1.6 'Microsoft YaHei',sans-serif;margin:25px}button,select{font:inherit;padding:8px 16px;margin:5px;color:#fee0ee;background:#182139;border:1px solid #6c7395}pre{white-space:pre-wrap;background:#101626;padding:20px}canvas{width:100%;max-width:1280px;display:block;border:1px solid #4a587a}label{display:block}</style>
+<h1>V2 浏览器验收台</h1><p>使用真实运行模块，独立于作品页面。测试不调用作品的全局变量，不引入第三方库。</p>
+<button id="verify">运行画布回归测试</button><button id="benchmark">测量 1080p 渲染</button>
+<label>中间帧<select id="phase"><option value="decode">代码解码 · 第二幕 3 秒</option><option value="particles">粒子成诗 · 第三幕 6.8 秒</option><option value="light">光迹书写 · 第四幕 25.1 秒</option><option value="spatial">空间文字 · 第五幕 21.3 秒</option><option value="burst">绽放旋涡 · 第四幕 16 秒</option><option value="to-poem">心脏成诗 · 第六幕 7 秒</option><option value="to-heart">诗句回心 · 第六幕 23 秒</option></select></label>
+<pre id="report">等待测试</pre><canvas id="test-canvas" width="1600" height="900"></canvas>
+<script type="module" src="./browser.js"></script></html>

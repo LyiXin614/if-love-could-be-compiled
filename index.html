@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050711">
+  <meta name="description" content="如果浪漫可以被编译——一封以粒子、时间与代码写成的可执行情诗。">
+  <title>如果浪漫可以被编译 · If Love Could Be Compiled</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <canvas id="art" aria-label="六幕交互粒子情诗，使用下方控制器播放"></canvas>
+  <div id="interface">
+    <header><a class="wordmark" href="./" aria-label="返回封面"><span class="mark">{ ♥ }</span> ROMANCE <i>/</i> EXECUTABLE</a><div class="edition">代码情诗 · 交互生成艺术 <span>VOL. 001 — ∞</span></div></header>
+    <div class="vertical-label">AN ALGORITHM FOR THE UNQUANTIFIABLE</div>
+    <section id="cover" aria-label="作品封面">
+      <div class="eyebrow"><span class="status-dot"></span> A POEM WRITTEN IN LIGHT</div>
+      <h1>如果浪漫<br>可以被<span>编译</span><em>。</em></h1>
+      <p class="english-title">If Love Could Be Compiled</p>
+      <div class="cover-rule"></div>
+      <p class="intro">在理性的尽头，<br>让一行代码，长成一整个宇宙。</p>
+      <button id="start" class="primary">开始编译 <span>↗</span></button>
+      <p class="duration">六幕可执行情诗 <span>约 2 分 52 秒 / 建议全屏体验</span></p>
+    </section>
+    <aside id="cover-note"><span>01 / INFINITE POSSIBILITIES</span><p>世界有千万种可能。<br>而你，是唯一的例外。</p><code>const forever = () =&gt; choose(you);</code></aside>
+    <div id="reading" class="sr-only" aria-live="polite"></div>
+    <section id="final-actions" hidden><button id="replay-end">再运行一次 ↺</button><button id="source-end">阅读源代码 ↗</button><button id="capture-end">定格这一刻 ⌑</button></section>
+    <footer id="controls">
+      <div class="transport"><button id="prev" title="上一幕 ←" aria-label="上一幕">←</button><button id="play" title="播放 / 暂停 空格">播放</button><button id="next" title="下一幕 →" aria-label="下一幕">→</button><span id="clock">00:00 / 02:52</span></div>
+      <nav id="chapters" aria-label="六幕时间轴"></nav>
+      <div class="tools"><button id="poem" title="切换备选诗句 P">换一句</button><button id="sound" aria-pressed="false">声音 关</button><label class="quality-label"><span class="sr-only">粒子质量</span><select id="quality" aria-label="粒子质量"><option value="auto">画质 自动</option><option value="high">画质 高</option><option value="medium">画质 中</option><option value="low">画质 低</option></select></label><button id="capture" title="截图模式 S">定格 ⌑</button><button id="fullscreen" title="全屏 F" aria-label="全屏">⛶</button></div>
+      <div id="progress"><div></div></div>
+    </footer>
+    <div id="cover-footer"><span>用代码，写下无法量化的心动。</span><span>CANVAS / MATHEMATICS / POETRY</span></div>
+  </div>
+  <section id="capture-panel" hidden aria-label="截图控制"><span>定格模式</span><nav id="presets" aria-label="关键画面预设"></nav><button id="export">保存 4K PNG ↓</button><button id="exit-capture">返回 · S</button></section>
+  <dialog id="source-dialog"><div class="dialog-top"><span>LOVE.POEM.JS / 可执行的情诗</span><button id="close-source" aria-label="关闭">×</button></div><p>以下源码真实驱动诗句、心跳、心形坐标与演出时间轴。</p><pre><code id="source-code"></code></pre><a href="./src/love.poem.js" target="_blank" rel="noopener">在新标签页阅读完整模块 ↗</a></dialog>
+  <div id="toast" role="status"></div>
+  <script type="module" src="./src/main.js"></script>
+</body></html>
